@@ -10,6 +10,15 @@
                     </a>
                 </li>
 
+                <li class="app-sidebar__heading">Category</li>
+
+                <li>
+                    <a href="{{ route('admin.category.index') }}" class="{{ Route::is('admin.category.index') ? 'mm-active' : '' }}">
+                        <i class="metismenu-icon pe-7s-diamond"></i>
+                        Category
+                    </a>
+                </li>
+
                 <li class="app-sidebar__heading">Property</li>
 
                 <li>

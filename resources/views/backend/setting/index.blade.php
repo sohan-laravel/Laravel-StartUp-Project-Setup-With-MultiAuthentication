@@ -1,7 +1,7 @@
 @extends('backend.layouts.app')
 
 @section('title')
-    Admin Setting
+    Setting
 @stop
 
 

@@ -22,7 +22,16 @@ Route::namespace('Admin')->prefix('admin')->group(function () {
 
 Route::group(['namespace' => 'Backend', 'prefix' => 'admin', 'middleware' => 'auth:admin'], function () {
     //Route::get('/', 'IndexController@index')->name('index');
+
+    //Admin Property
+
     Route::resource('property', 'PropertyController', ['names' => 'admin.property']);
+
+    //Admin Category
+
+    Route::resource('category', 'CategoryController', ['names' => 'admin.category']);
+    Route::get('/category/edit/{id}', 'CategoryController@editcat');
+    Route::post('/category-update', 'CategoryController@updateCategory')->name('admin.update.category');
 
     //Admin Profile
 
